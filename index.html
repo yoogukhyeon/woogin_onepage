@@ -156,6 +156,7 @@
             $(this).parent('li').addClass('on');
             $(this).parent('li').siblings().removeClass('on')
             
+            
         })
         var ScrollTop = $(window).scroll();
         
@@ -170,6 +171,61 @@
        })
         
       
+        $(window).scroll(function(){
+            var Scroll = $(window).scrollTop();
+            var num = $('#container > div').eq(0).offset().top + -100;
+            var num1 = $('#container > div').eq(1).offset().top + -100;
+            var num2 = $('#container > div').eq(2).offset().top + -100;
+            var num3 = $('#container > div').eq(3).offset().top + -100;
+    
+            
+            
+            if(Scroll >= num && Scroll <= num1){
+                $('#nav > ul > li').removeClass('on');
+                $('#nav > ul > li').eq(0).addClass('on');
+        
+            }else if(Scroll >= num1 && Scroll <= num2){
+                 $('#nav > ul > li').removeClass('on');
+                 $('#nav > ul > li').eq(1).addClass('on')
+            }else if(Scroll >= num2 && Scroll <= num3 ){
+                 $('#nav > ul > li').siblings().removeClass('on');
+                 $('#nav > ul > li').eq(2).addClass('on')
+            }else if(Scroll >= num3){
+                   $('#nav > ul > li').siblings().removeClass('on');
+                 $('#nav > ul > li').eq(3).addClass('on')
+            }
+
+            
+        
+        });
+        
+        
+        
+    /*    $(window).resize(function(){
+          var Scroll = $(window).scrollTop();
+          var num2 = $('#container > div').eq(2).offset().top;
+          var num3 = $('#container > div').eq(3).offset().top;
+            console.log(num3)
+        if($(window).width() >= 680){
+          if(Scroll >= 6165){
+               $('#nav > ul > li').siblings().removeClass('on');
+                 $('#nav > ul > li').eq(3).addClass('on')
+          }      
+       
+                
+        }
+            
+            
+        })*/
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
