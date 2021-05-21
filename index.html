@@ -71,7 +71,7 @@
              .is_pc {display: none}
              .is_mo {display: block}
              #nav > ul > li:hover > a::after {display: none}
-             .sec4 {padding-top: 40px}
+             .sec4 {}
              #nav.on {position: fixed; top: 0; left: 0; transition: all 1s ease-in-out; width: 100%} 
              .all_wrap {margin-bottom: 100px}
              .floating {top: 91%}
@@ -152,7 +152,7 @@
             e.preventDefault();
             var qqq = $(this).parent('li').index();
             
-            var num = $('#container > div').eq(qqq).offset().top;
+            var num = $('#container > div').eq(qqq).offset().top -45;
                  $('html').animate({
                 scrollTop: num
             }, 1500);
@@ -176,10 +176,10 @@
       
         $(window).scroll(function(){
             var Scroll = $(window).scrollTop();
-            var num = $('#container > div').eq(0).offset().top + -20;
-            var num1 = $('#container > div').eq(1).offset().top + -200;
-            var num2 = $('#container > div').eq(2).offset().top + -20;
-            var num3 = $('#container > div').eq(3).offset().top + -60;
+            var num = $('#container > div').eq(0).offset().top;
+            var num1 = $('#container > div').eq(1).offset().top -500;
+            var num2 = $('#container > div').eq(2).offset().top -500;
+            var num3 = $('#container > div').eq(3).offset().top -500;
     
             
             
@@ -205,31 +205,21 @@
         
         
         $(window).resize(function(){
-            if($(window).width() >= 680){
-            var Scroll = $(window).scrollTop();
-            var num = $('#container > div').eq(0).offset().top + -20;
-            var num1 = $('#container > div').eq(1).offset().top + -2000;
-            var num2 = $('#container > div').eq(2).offset().top + -2000;
-            var num3 = $('#container > div').eq(3).offset().top + -60;
-    
             
- 
-                
+            const $Window = $(window).scrollTop();
+            const qqq = $('#container > div').eq(0).offset().top;
+            
+            if($(window).width() <= 690){
+                alert('690')
+         
+            
             }
-       
+            
+            
         })
         
         
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
+    
     })
     
     
