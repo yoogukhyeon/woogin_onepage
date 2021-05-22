@@ -62,7 +62,7 @@
              #nav > ul > li {line-height: 20px; }
              #nav > ul > li > a {line-height: 20px; text-align: center; padding: 3px}
              .br {display: block; text-align: center}
-             .review {padding-top: 3% !important; padding: 0 2%}
+             .review {padding-top: 8% !important; padding: 0 2%}
              .review > li {width: 49%; height: auto;float: left;margin-right: 0%; margin-bottom: 2%} 
              .review > li:nth-child(1) {margin-right: 2%}
              .review > li:nth-child(3) {margin-right: 2%} 
@@ -152,7 +152,7 @@
             e.preventDefault();
             var qqq = $(this).parent('li').index();
             
-            var num = $('#container > div').eq(qqq).offset().top -45;
+            var num = $('#container > div').eq(qqq).offset().top -25;
                  $('html').animate({
                 scrollTop: num
             }, 1500);
@@ -177,9 +177,9 @@
         $(window).scroll(function(){
             var Scroll = $(window).scrollTop();
             var num = $('#container > div').eq(0).offset().top;
-            var num1 = $('#container > div').eq(1).offset().top;
-            var num2 = $('#container > div').eq(2).offset().top;
-            var num3 = $('#container > div').eq(3).offset().top;
+            var num1 = $('#container > div').eq(1).offset().top -500;
+            var num2 = $('#container > div').eq(2).offset().top -500;
+            var num3 = $('#container > div').eq(3).offset().top -100;
     
             
             
